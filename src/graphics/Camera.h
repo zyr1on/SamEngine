@@ -26,11 +26,9 @@ public:
     glm::vec3 Right;
     glm::vec3 WorldUp;
 
-    // Euler Açıları (Derece cinsinden)
     float Yaw;
     float Pitch;
 
-    // Kamera Seçenekleri
     float MovementSpeed = 2.5f;
     float MouseSensitivity = 0.1f;
     float Zoom = 45.0f;

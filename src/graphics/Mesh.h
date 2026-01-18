@@ -1,16 +1,14 @@
 #ifndef MESH_H
 #define MESH_H
 
-#include <glad/glad.h> // OpenGL fonksiyonları için (glew de olabilir)
+#include <glad/glad.h>
 #include "MeshData.h"
 
 class Mesh {
 public:
-    // Constructor: MeshData'yı alır ve GPU'ya yükler
     Mesh(const MeshData& data);
     ~Mesh();
 
-    // Çizim fonksiyonu
     void Draw() const;
 
 private:

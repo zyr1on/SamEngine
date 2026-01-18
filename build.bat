@@ -12,6 +12,8 @@ if exist build (
 )
 
 REM Çalıştırılabilir dosyayı çalıştır
+cls
 cd bin
 OpenGL.exe
 cd ..
+

@@ -1,0 +1,10 @@
+# Derleme çıktıları
+build/
+bin/
+
+# IDE ayarları
+.idea/
+
+# Geçici dosyalar
+*.log
+*.tmp

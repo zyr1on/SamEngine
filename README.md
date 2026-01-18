@@ -25,7 +25,7 @@
 ## Development Process (WIP)
 This project is constantly evolving. I plan to add the following in the next stages:
 - [ ] Material class for shader and mesh management (could be json-based)
-- [ ] Transform Component and Entity system
+- [ ] Transform Component and basic Entity class
 - [ ] Simple scene management for entities as active/inactive (could also be JSON-based)
 - [ ] Model Loader system to load `.obj` files.
 - [ ] A more advanced and centralized Input Manager.

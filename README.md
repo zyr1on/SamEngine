@@ -1,34 +1,35 @@
-# SamEngine 
+# SamEngine
 
-**SamEngine**, oyun motoru mimarisini ve OpenGL grafik programlamayı en temelden öğrenmek amacıyla başlattığım bir **hobi projesidir.** Bu proje, "Bir oyun motoru arka planda nasıl çalışır?" sorusuna cevap ararken öğrendiğim teknikleri uyguladığım bir kişisel gelişim alanıdır. Ticari bir amaç gütmeden, tamamen temiz kod yazma prensiplerini ve grafik programlama mantığını kavrama odaklı geliştirilmektedir.
+**SamEngine** is a **hobby project** I started to learn game engine architecture and OpenGL graphics programming from the ground up. This project is a personal development area where I apply the techniques I learned while searching for answers to the question, “How does a game engine work in the background?” It is developed without any commercial purpose, focusing entirely on clean coding principles and understanding the logic of graphics programming.
 
-## Öğrenme Hedeflerim
-* OpenGL render hattı (pipeline) sürecini derinlemesine anlamak.
-* C++ ile bellek yönetimi ve RAII prensiplerini uygulamak.
-* Shader yönetimi ve matematiksel ışıklandırma modellerini (Phong vb.) kavramak.
-* Verimli kaynak (Resource) yönetimi sistemleri kurmak.
+## My Learning Goals
+* Deeply understand the OpenGL render pipeline process.
+* Apply memory management and RAII principles with C++.
+* Understand shader management and mathematical lighting models (Phong, etc.).
+* Build efficient resource management systems.
 
-## Şu Ana Kadar Neler Yaptım?
-* **Modern Window Yapısı:** GLFW'yi kapsülleyen, statik callback desteği sunan ve RAII prensibine uygun modüler bir `Window` sınıfı.
-* **DeltaTime Sistemi:** Kare hızından bağımsız (frame-rate independent) akıcı hareketler için zaman yönetimi.
-* **Akıllı Shader Sistemi:** Shader'ları kolayca yükleyen, uniform lokasyonlarını önbelleğe alan (Caching) ve detaylı loglama yapan profesyonel bir yapı.
-* **Texture Manager:** Singleton desenini kullanarak dokuları `std::unordered_map` ile yöneten, mükerrer yüklemeleri önleyerek performansı artıran sistem.
-* **Temel Aydınlatma:** Ambient, Diffuse ve Specular bileşenlerinden oluşan Phong ışıklandırma modeli entegrasyonu.
+## What Have I Done So Far?
+* **Modern Window Structure:** A modular `Window` class that encapsulates GLFW, offers static callback support, and complies with the RAII principle.
+* **DeltaTime System:** Time management for smooth motion independent of frame rate.
+* **Smart Shader System:** A professional structure that easily loads shaders, caches uniform locations, and performs detailed logging.
+* **Texture Manager:** A system that manages textures using the singleton pattern with `std::unordered_map`, preventing duplicate loads and improving performance.
+* **Basic Lighting:** Integration of the Phong lighting model consisting of Ambient, Diffuse, and Specular components. 
 
-## Teknik Araçlar
-* **Dil:** C++20
-* **Grafik API:** OpenGL 3.3 (Core Profile)
-* **Kütüphaneler:** GLFW, GLAD, GLM, stb_image
-* **Derleme Sistemi:** CMake
 
-## Geliştirme Süreci (WIP)
-Bu proje sürekli gelişmektedir. Bir sonraki aşamalarda şunları eklemeyi planlıyorum:
-- [ ] Shader ve Mesh yönetimi için Material sınıfı( json tabanlı olabilir)
-- [ ] Transform Component ve Entity sistemi
-- [ ] Entityler için active,deactive olarak basit sahne yönetimi (yine json tabanlı olabilir)
-- [ ] `.obj` dosyalarını yükleyebilmek için Model Loader sistemi.
-- [ ] Daha gelişmiş ve merkezi bir Input Manager.
-- [ ] Hata ayıklama ve sahne yönetimi için ImGui entegrasyonu.
-- [ ] Farklı ışık türleri (Directional, Point, Spot Light).
+## Technical Tools
+* **Language:** C++20
+* **Graphics API:** OpenGL 3.3 (Core Profile)
+* **Libraries:** GLFW, GLAD, GLM, stb_image
+* **Build System:** CMake
+
+## Development Process (WIP)
+This project is constantly evolving. I plan to add the following in the next stages:
+- [ ] Material class for shader and mesh management (could be json-based)
+- [ ] Transform Component and Entity system
+- [ ] Simple scene management for entities as active/inactive (could also be JSON-based)
+- [ ] Model Loader system to load `.obj` files.
+- [ ] A more advanced and centralized Input Manager.
+- [ ] ImGui integration for debugging and scene management.
+- [ ] Different light types (Directional, Point, Spot Light).
 - [ ] Entity Component System
 - [ ] Sahne Yönetimi

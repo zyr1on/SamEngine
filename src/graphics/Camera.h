@@ -38,7 +38,9 @@ public:
 
     // --- Matris Fonksiyonları ---
     glm::mat4 getView() const;
-    glm::mat4 getProjection(float screenWidth, float screenHeight, float nearPlane = 0.1f, float farPlane = 100.0f) const;
+    //glm::mat4 getProjection(float screenWidth, float screenHeight, float nearPlane = 0.1f, float farPlane = 100.0f) const;
+    glm::mat4 getProjection(float nearPlane = 0.1f, float farPlane = 100.0f) const;
+
 
     // --- Pozisyon ve Bakış ---
     void setPosition(glm::vec3 newPos);
@@ -51,9 +53,13 @@ public:
 
     void processMovement(GLFWwindow* window, float deltaTime);
 
+    void setScreenSize(int w, int h);
+
 private:
     // İçsel vektörleri (Front, Right, Up) Euler açılarına göre günceller
     void updateCameraVectors();
+    float screenWidth;
+    float screenHeight;
 };
 
 #endif

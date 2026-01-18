@@ -23,7 +23,12 @@
 
 ## Geliştirme Süreci (WIP)
 Bu proje sürekli gelişmektedir. Bir sonraki aşamalarda şunları eklemeyi planlıyorum:
+- [ ] Shader ve Mesh yönetimi için Material sınıfı( json tabanlı olabilir)
+- [ ] Transform Component ve Entity sistemi
+- [ ] Entityler için active,deactive olarak basit sahne yönetimi (yine json tabanlı olabilir)
 - [ ] `.obj` dosyalarını yükleyebilmek için Model Loader sistemi.
 - [ ] Daha gelişmiş ve merkezi bir Input Manager.
 - [ ] Hata ayıklama ve sahne yönetimi için ImGui entegrasyonu.
 - [ ] Farklı ışık türleri (Directional, Point, Spot Light).
+- [ ] Entity Component System
+- [ ] Sahne Yönetimi

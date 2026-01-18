@@ -1,4 +1,4 @@
-# SamEngine 🚀
+# SamEngine 
 
 **SamEngine**, oyun motoru mimarisini ve OpenGL grafik programlamayı en temelden öğrenmek amacıyla başlattığım bir **hobi projesidir.** Bu proje, "Bir oyun motoru arka planda nasıl çalışır?" sorusuna cevap ararken öğrendiğim teknikleri uyguladığım bir kişisel gelişim alanıdır. Ticari bir amaç gütmeden, tamamen temiz kod yazma prensiplerini ve grafik programlama mantığını kavrama odaklı geliştirilmektedir.
 

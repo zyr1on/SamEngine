@@ -17,10 +17,10 @@
 
 
 ## Technical Tools
-* **Language:** C++20
-* **Graphics API:** OpenGL 3.3 (Core Profile)
+* **Language:** C++20 (mingw64 15.2.0) [C++ ==> MinGW-w64 binaries](https://github.com/niXman/mingw-builds-binaries)
+* **Graphics API:** OpenGL 3.3 (Core Profile)  [Glad](https://glad.dav1d.de/)
 * **Libraries:** GLFW, GLAD, GLM, stb_image
-* **Build System:** CMake
+* **Build System:** CMake (Cmake for windows with mingw64 make)
 
 ## Development Process (WIP)
 This project is constantly evolving. I plan to add the following in the next stages:

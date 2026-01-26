@@ -57,6 +57,7 @@ bool Window::init(const char* title) {
 
 void Window::setCamera(Camera* camera) {
     m_camera = camera;
+    camera->setScreenSize(m_width,m_height);
 }
 
 void Window::update() {

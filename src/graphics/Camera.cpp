@@ -9,8 +9,10 @@ glm::mat4 Camera::getView() const {
     return glm::lookAt(Position, Position + Front, Up);
 }
 
-glm::mat4 Camera::getProjection(float screenWidth, float screenHeight, float nearPlane, float farPlane) const {
+glm::mat4 Camera::getProjection(float nearPlane, float farPlane) const {
+    //return glm::perspective(glm::radians(Zoom), screenWidth / screenHeight, nearPlane, farPlane);
     return glm::perspective(glm::radians(Zoom), screenWidth / screenHeight, nearPlane, farPlane);
+
 }
 
 void Camera::setPosition(glm::vec3 newPos) {
@@ -77,4 +79,13 @@ void Camera::processMovement(GLFWwindow* window, float deltaTime) {
         processKeyboard(LEFT, deltaTime);
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         processKeyboard(RIGHT, deltaTime);
+    if(glfwGetKey(window,GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
+        MovementSpeed = 5.0f;
+    else
+        MovementSpeed = 2.5f;
+}
+
+void Camera::setScreenSize(int w, int h){
+    screenHeight = h;
+    screenWidth = w;
 }

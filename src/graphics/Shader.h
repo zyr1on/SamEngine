@@ -2,44 +2,34 @@
 #define SHADER_H
 
 #include <glad/glad.h>
-#include <unordered_map>
 #include <glm/glm.hpp>
-#include <glm/gtc/type_ptr.hpp>
-#include <iostream>
-#include <fstream>
-#include <sstream>
+#include <string>
+#include <unordered_map>
 
-class Shader
-{
+class Shader {
 public:
-    // Shader(std::string vertexPath, std::string fragmentPath, std::string shaderName);
-    Shader(std::string_view vertexPath, std::string_view fragmentPath, std::string shaderName = "unknown");
-
+    Shader(const std::string& vertexPath, const std::string& fragmentPath);
     ~Shader();
 
-    void addUniform(const std::string &name);
-    void setUniform(std::string_view name, int value);
-    void setUniform(std::string_view name, float value);
-    void setUniform(std::string_view name, bool value);
-    void setUniform(std::string_view name, const glm::mat4 &aMat);
-    void setUniform(std::string_view name, const glm::mat3 &aMat);
-    void setUniform(std::string_view name, const glm::vec3 &aVec);
-    void setUniform(std::string_view name, const glm::vec4 &aVec);
-    void use();
+    void Use() const;
+    unsigned int GetProgramID() const { return programID; }
+
+    // Uniform setters - location'ları cache'ler
+    void SetInt(const std::string& name, int value);
+    void SetFloat(const std::string& name, float value);
+    void SetVec3(const std::string& name, const glm::vec3& value);
+    void SetVec4(const std::string& name, const glm::vec4& value);
+    void SetMat4(const std::string& name, const glm::mat4& value);
+    void SetVec3Array(const std::string& name, const std::vector<glm::vec3>& values);
 
 private:
-    std::unordered_map<std::string, unsigned int> m_UniformCache;
+    unsigned int programID;
+    mutable std::unordered_map<std::string, int> uniformLocationCache;
 
-    void cacheUniforms();
-    void createProgram();
-    void checkCompileErrors(GLenum type, std::string &source);
-
-    GLuint compileShader(GLuint id, GLenum type);
-
-    GLuint m_ProgramID;
-    std::string shaderName;
-    unsigned int vertexShader;
-    unsigned int fragmentShader;
+    int GetUniformLocation(const std::string& name) const;
+    std::string ReadFile(const std::string& path);
+    unsigned int CompileShader(unsigned int type, const std::string& source);
+    void LinkProgram(unsigned int vertexShader, unsigned int fragmentShader);
 };
 
 #endif

@@ -4,7 +4,7 @@ out vec4 FragColor;
 
 in vec2 TexCoord;
 in vec3 Normal;
-in vec3 FragPos;
+in vec3 FragPos; 
 
 // Işık ve Kamera Bilgileri
 uniform vec3 lightPos;   // Işığın dünyadaki konumu
@@ -18,7 +18,7 @@ void main()
     float ambientStrength = 0.1;
     vec3 ambient = ambientStrength * lightColor;
 
-    // 2. Diffuse (Yayılma Aydınlatması - Işığın yüzeye geliş açısı)
+    // 2. Diffuse (Yayılma Aydınlatması - Işığın yüzeye geliş açısı)    
     vec3 norm = normalize(Normal);
     vec3 lightDir = normalize(lightPos - FragPos);
     float diff = max(dot(norm, lightDir), 0.0);

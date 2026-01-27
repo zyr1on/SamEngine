@@ -17,7 +17,7 @@ This repository reflects an ongoing learning process rather than a finished engi
   - MSYS2 with **UCRT64** toolchain
   - Using the UCRT-based GCC/Clang environment for better C/C++ standard compliance
   ```bash
-  $ pacman -S mingw-w64-ucrt-x86_64-toolchain
+  $ pacman -S mingw-w64-ucrt-x86_64-toolchain                            # download and compiler location: C:\msys64\ucrt64\*
   $ pacman -S mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja
   ```
 - **Build System**

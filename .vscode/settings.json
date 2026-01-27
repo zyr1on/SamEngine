@@ -1,8 +1,11 @@
 {
+    "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
     "C_Cpp.files.exclude": {
         "**/.vscode": true,
         "**/.git": true,
-        "**/build": true
+        // "/": true,
+        "**/build": true,
+        "**/third_party": true
     },
     "files.watcherExclude": {
         "**/.git/objects/**": true,
@@ -10,8 +13,9 @@
         "**/include/**": true,
         "**/third_party/**": true
     },
-    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
+    "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/g++.exe",
     "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
     "files.associations": {
         "*.h": "cpp",
         "*.hpp": "cpp",
@@ -19,17 +23,14 @@
         "*.vert": "glsl",
         "*.frag": "glsl"
     },
-    "editor.quickSuggestionsDelay": 0,
-    "editor.suggest.localityBonus": true,
-    "editor.suggest.shareSuggestSelections": true,
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": false
-    },
+    "editor.quickSuggestionsDelay": 250,
     "editor.minimap.enabled": false,
     "editor.smoothScrolling": false,
     "editor.renderWhitespace": "none",
     "editor.renderLineHighlight": "none",
-    "C_Cpp.errorSquiggles": "enabled"
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "C_Cpp.workspaceParsingPriority": "medium",
+    "C_Cpp.autoAddFileAssociations": false,
+    // "C_Cpp.intelliSenseUpdateDelay": 2000,
+    "C_Cpp.loggingLevel": "None"
 }

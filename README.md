@@ -53,6 +53,16 @@ This repository reflects an ongoing learning process rather than a finished engi
   - Add a shader cache to reuse compiled permutations  
   - Select shader variants automatically based on material features  
 
+- [ ] Integrate **Bindless Textures**  
+  - Use GPU handles instead of traditional texture binding  
+  - Store texture handles in buffers (SSBO / UBO)  
+  - Reduce draw-call state changes  
+
+- [ ] Introduce **Dummy / Fallback Textures**  
+  - Automatically bind default textures when a material texture is missing  
+  - White texture for albedo, flat normal map for normals, black texture for masks  
+  - Avoid shader branching and unnecessary permutations
+
 - [ ] Design a clean **Renderer API**  
   - Separate rendering logic from game logic  
   - Provide a clear interface for submitting meshes, materials, and lights  
@@ -68,10 +78,22 @@ This repository reflects an ongoing learning process rather than a finished engi
   - Light, Camera, and MeshRenderer should be components  
   - Store and iterate components efficiently using EnTT views and systems  
 
+
+
 - [ ] Add **model loading with Assimp**  
   - Support common formats (OBJ, FBX, GLTF, etc.)  
   - Convert loaded meshes into engine Mesh and Material representations  
   - Integrate Assimp-loaded models with the ECS and Renderer
+
+
+- [ ] Integrate **ImGui**  
+  - Debug UI for renderer, materials, and scene state  
+  - Simple in-engine inspection tools  
+
+- [ ] Learn and implement **Deferred Rendering**  
+  - Build a G-Buffer (position, normal, albedo, material data)  
+  - Separate geometry and lighting passes  
+  - Understand trade-offs compared to forward rendering  
   
 
 ## Project Direction
